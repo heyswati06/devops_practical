@@ -6,11 +6,11 @@ docker-compose: It brings up 2 containers for node js service and mongodb servic
 Dockerfile: details the config for node js container
 Run 'docker-compose up' to create both the containers on local machine
 
- docker-compose up
- docker build -t heyswati06/devopspractical_api .
- docker images
- docker login
- docker push heyswati06/devopspractical_api
+ - docker-compose up
+ - docker build -t heyswati06/devopspractical_api .
+ - docker images
+ - docker login
+ - docker push heyswati06/devopspractical_api
 
 Information about how you set up the Kubernetes cluster
 ======================================================
@@ -19,8 +19,8 @@ Created a new eks cluster, and attached role+permissions to it
 Created a node group, and attached roles+permissions to it
 
 To deploy the app on EKS,  partially created the custom helm-charts but still went through the kubectl route for quickly deploying the app-
-aws eks update-kubeconfig --region ap-northeast-1 --name nodejs-eks
-kubectl create -f C:\Users\MSUSERSL123\Documents\interview_questions\devops-practical\pod.yml
+- aws eks update-kubeconfig --region ap-northeast-1 --name nodejs-eks
+- kubectl create -f C:\Users\MSUSERSL123\Documents\interview_questions\devops-practical\pod.yml
 [This pod.yml refers to the same image that is pushed on docker hub]
 
 Non-Functional Requirements-
